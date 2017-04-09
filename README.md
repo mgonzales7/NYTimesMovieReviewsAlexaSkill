@@ -46,7 +46,10 @@ RatingIntent what is {Movie} rated
 SummaryIntent summarize {Movie}
 SummaryIntent {Movie}
 SummaryIntent tell me about {Movie}
+SummaryIntent about {Movie}
 DateIntent when did {Movie} come out
 DateIntent when did {Movie} premier
 DateIntent is {Movie} out yet
+CriticIntent what are the critic picks
+CriticIntent critic picks
 ```

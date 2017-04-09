@@ -1,5 +1,8 @@
 # New York Times Movie Review - Alexa Skill
 An Alexa Skill created to interact with the New York Times Moview Reviews API
+
+It runs hosted via a Lambda function on Amazon Webservices. The Alexa Skill Kit settings are below.
+
 ## Intent Schema
 ```
 {

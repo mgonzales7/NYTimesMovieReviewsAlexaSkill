@@ -4,6 +4,7 @@ An Alexa Skill created to interact with the New York Times Movie Reviews API
 It runs hosted via a Lambda function on Amazon Webservices. The Alexa Skill Kit settings are below.
 
 ## Intent Schema
+(Name of interactions that trigger functions)
 ```
 {
   "intents": [
@@ -41,6 +42,7 @@ It runs hosted via a Lambda function on Amazon Webservices. The Alexa Skill Kit 
 }
 ```
 ## Sample Utterances
+(The phrases that trigger the above intents)
 ```
 RatingIntent what is the rating of {Movie}
 RatingIntent is {Movie} appropriate for kids

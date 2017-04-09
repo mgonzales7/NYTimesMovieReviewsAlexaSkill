@@ -45,6 +45,32 @@ var handlers = {
         })
     },
 
+    "CriticIntent": function () {
+        var speechOutput = "";
+        var criticPicks = "";
+        var self = this;
+
+        request.get({
+            url: "https://api.nytimes.com/svc/movies/v2/reviews/search.json",
+            qs: {
+                'api-key': process.env.TimesAPIKey,
+                'critics-pick': "Y"
+            },
+        }, function(err, response, body) {
+            body = JSON.parse(body);
+            length = body.results.length;
+            for(var i = 0; i<length; i++ ){
+                if(i===length-1) {
+                    criticPicks += "and ";
+                }
+                criticPicks += body.results[i].display_title + ", ";
+            }
+            var title = "Critic Picks ";
+            speechOutput += "The Critic Picks are " + criticPicks;
+            self.emit(':tellWithCard', speechOutput, title, speechOutput);
+        })
+    },
+
     "SummaryIntent": function () {
         var speechOutput = "";
         var movie = this.event.request.intent.slots.Movie.value;

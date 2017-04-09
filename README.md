@@ -17,6 +17,9 @@ It runs hosted via a Lambda function on Amazon Webservices. The Alexa Skill Kit 
       "intent": "RatingIntent"
     },
     {
+      "intent": "CriticIntent"
+    },
+    {
       "slots": [
         {
           "name": "Movie",
